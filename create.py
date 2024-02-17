@@ -1,6 +1,4 @@
 import psycopg2 as psycopg2
-import pandas as pd
-import random
 
 
 def connection():
@@ -17,9 +15,7 @@ query_user = """
     CREATE TABLE IF NOT EXISTS users(
         id_user SERIAL PRIMARY KEY,
         name VARCHAR(30) NOT NULL,
-        password varchar(30) NOT NULL,
-        games INTEGER CHECK (games >= 0),
-        score_sum INTEGER CHECK (score_sum >= 0)
+        password varchar(30) NOT NULL
     );
     """
 
